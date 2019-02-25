@@ -4,7 +4,7 @@ const { load } = require("js-yaml");
 
 const resolveYAML = location => load(fs.readFileSync(location, "utf8"), { noCompatMode: true });
 
-const base = resolveYAML("./.eslintrc.yml");
+const base = resolveYAML("base.yml");
 
 function minify(str) {
   switch (`${str}`) {

@@ -1,7 +1,7 @@
 {
   "name": "@coalpha/eslint-config",
   "version": "0.0.1",
-  "description": "An eslint config for my code",
+  "description": "A custom eslint config for my code",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -15,9 +15,6 @@
   "homepage": "https://github.com/Coalpha/eslint-config#readme",
   "devDependencies": {
     "js-yaml": "^3.12.1"
-  },
-  "dependencies": {
-    "eslint": "^5.14.1"
   },
   "scripts": {
     "build": "node build.js"
