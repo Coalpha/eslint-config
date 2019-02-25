@@ -1,6 +1,7 @@
 no-delete-var: warn
 no-label-var: warn
 no-restricted-globals:
+  - warn
   - addEventListener
   - blur
   - close

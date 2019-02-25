@@ -26,7 +26,7 @@ base.rules = Object.assign(
     const rules = resolveYAML(`./rules/${fileName}.yml`);
     Object.keys(rules).forEach(key => {
       const val = rules[key];
-      rules[key] = Array.isArray(val) ? val.map(minify) : minify(val);
+      rules[key] = Array.isArray(val) ? [minify(val[0]), ...val.slice(1)] : minify(val);
     });
     return rules;
   })

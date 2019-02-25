@@ -11,7 +11,9 @@ brace-style:
   - 1tbs
   - allowSingleLine: true
 # camelcase: warn
-capitalized-comments: warn
+capitalized-comments:
+  - warn
+  - never
 comma-dangle:
   - error
   - arrays: &lf always-multiline
@@ -105,7 +107,7 @@ no-whitespace-before-property: error
 nonblock-statement-body-position: error
 object-curly-newline:
   - error
-  - multiline
+  - multiline: true
 object-property-newline:
   - error
   - allowAllPropertiesOnSameLine: true

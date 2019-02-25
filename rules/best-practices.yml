@@ -4,8 +4,9 @@ array-callback-return:
   - allowImplicit: true # ary.map(v => { return; }) works
 class-methods-use-this:
   - warn
+consistent-return:
+  - warn
   - treatUndefinedAsUnspecified: true
-consistent-return: warn
 curly:
   - error
   - multi-or-nest
