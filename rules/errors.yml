@@ -1,0 +1,6 @@
+no-async-promise-executor: error
+no-await-in-loop: warn
+no-misleading-character-class: error
+no-prototype-builtins: warn
+no-template-curly-in-string: error
+require-atomic-updates: error

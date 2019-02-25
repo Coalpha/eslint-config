@@ -1,0 +1,151 @@
+array-bracket-newline:
+  - error
+  - consistent
+array-bracket-spacing: warn
+array-element-newline:
+  - error
+  - consistent
+block-spacing: error
+brace-style:
+  - error
+  - 1tbs
+  - allowSingleLine: true
+# camelcase: warn
+capitalized-comments: warn
+comma-dangle:
+  - error
+  - arrays: &lf always-multiline
+    objects: *lf
+    imports: *lf
+    exports: *lf
+    functions: *lf
+comma-spacing: error
+comma-style:
+  - error
+  - last
+  - exceptions:
+      ArrayExpression: false
+      ArrayPattern: false
+      ArrowFunctionExpression: false
+      CallExpression: false
+      FunctionDeclaration: false
+      FunctionExpression: false
+      ImportDeclaration: false
+      ObjectExpression: false
+      ObjectPattern: false
+      VariableDeclaration: false
+      NewExpression: false
+computed-property-spacing: error
+consistent-this: warn
+eol-last: error
+func-call-spacing: error
+func-names:
+  - warn
+  - as-needed
+func-style:
+  - warn
+  - declaration
+  - allowArrowFunctions: true
+function-paren-newline:
+  - error
+  - consistent
+implicit-arrow-linebreak: error
+indent:
+  - error
+  - 2
+  - SwitchCase: 1
+    # ignoredNodes:
+    #   - JSXElement
+    #   - JSXElement > *
+    #   - JSXAttribute
+    #   - JSXIdentifier
+    #   - JSXNamespacedName
+    #   - JSXMemberExpression
+    #   - JSXSpreadAttribute
+    #   - JSXExpressionContainer
+    #   - JSXOpeningElement
+    #   - JSXClosingElement
+    #   - JSXText
+    #   - JSXEmptyExpression
+    #   - JSXSpreadChild
+# jsx-quotes: error
+key-spacing: error
+keyword-spacing: error
+# line-comment-position: warn
+linebreak-style: error
+lines-between-class-members: warn
+max-len:
+  - warn
+  - 100
+  - 2
+multiline-comment-style: warn
+new-cap:
+  - warn
+  - capIsNew: false
+new-parens: warn
+newline-per-chained-call:
+  - warn
+  - ignoreChainWithDepth: 4
+no-array-constructor: warn
+no-lonely-if: error
+no-multiple-empty-lines: warn
+no-negated-condition: error
+# no-nested-ternary: warn # not sure about this one
+no-new-object: error
+no-restricted-syntax:
+  - error
+  - selector: ForInStatement
+    message: for..in iterates over the entire prototype chain, catching any mistakenly enumerable values
+  - selector: WithStatement
+    message: "`with` destroys performance and makes code harder to understand"
+no-tabs: error # N O   T A B S
+no-trailing-spaces: error
+no-unneeded-ternary: error
+no-whitespace-before-property: error
+nonblock-statement-body-position: error
+object-curly-newline:
+  - error
+  - multiline
+object-property-newline:
+  - error
+  - allowAllPropertiesOnSameLine: true
+one-var:
+  - warn
+  - var: &1var consecutive
+    let: *1var
+    const: *1var
+    separateRequires: true
+one-var-declaration-per-line:
+  - error
+  - initializations
+operator-assignment:
+  - warn
+  - always
+operator-linebreak:
+  - warn
+  - before
+prefer-object-spread: warn
+quote-props:
+  - error
+  - consistent-as-needed # Can't choose?
+  - keywords: true
+quotes: error # I'd like it if characters used single quotes but I'm too lazy to write a rule for that
+semi: error
+semi-spacing: error
+semi-style: error
+space-before-blocks: error
+space-before-function-paren:
+  - error
+  - anonymous: always
+    named: never
+    asyncArrow: always
+space-in-parens: error
+space-infix-ops: error
+space-unary-ops:
+  - error
+  - words: true
+    nonwords: false
+spaced-comment: error
+switch-colon-spacing: error
+template-tag-spacing: error
+unicode-bom: warn

@@ -1,0 +1,30 @@
+arrow-body-style:
+  - warn
+  - as-needed
+arrow-parens:
+  - warn
+  - as-needed
+arrow-spacing: error
+generator-star-spacing:
+  - error
+  - before: false
+    after: true
+no-duplicate-imports: error
+no-useless-computed-key: error
+no-useless-constructor: warn
+no-useless-rename: error
+object-shorthand: error
+prefer-arrow-callback:
+  - warn
+  - allowNamedFunctions: true
+    allowUnboundThis: true
+prefer-const: warn
+prefer-destructuring: warn
+prefer-numeric-literals: warn
+prefer-rest-params: error
+prefer-spread: error
+prefer-template: warn
+rest-spread-spacing: error
+symbol-description: warn
+template-curly-spacing: error # I'm not sure why I like it like ${this} but it's better than ${ this }
+yield-star-spacing: error # yield* something()

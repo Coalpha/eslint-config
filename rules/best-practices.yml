@@ -1,0 +1,118 @@
+accessor-pairs: warn # Getter/Setter pairs
+array-callback-return:
+  - warn
+  - allowImplicit: true # ary.map(v => { return; }) works
+class-methods-use-this:
+  - warn
+  - treatUndefinedAsUnspecified: true
+consistent-return: warn
+curly:
+  - error
+  - multi-or-nest
+  - consistent
+default-case:
+  - warn
+  - commentPattern: "^no default$"
+dot-location:
+  - error
+  - property
+dot-notation:
+  - error
+  - allowKeywords: true
+eqeqeq:
+  - error
+  - smart
+guard-for-in: error
+no-alert: warn
+no-caller: error
+no-else-return:
+  - error
+  - allowElseIf: false
+no-eq-null: error
+no-eval: warn
+no-extend-native: warn
+no-extra-bind: error
+no-extra-label: error
+no-fallthrough: warn
+no-floating-decimal: warn
+no-implicit-coercion:
+  - warn
+  - boolean: false
+no-implied-eval: warn
+no-invalid-this: error
+no-iterator: error # no __iterator__
+no-loop-func: error # no function declarations within loops
+no-multi-spaces: error # no (something  === 1)
+no-new: error # no new side effects
+no-new-func: warn # eval basically
+no-new-wrappers: error # no new String()
+no-param-reassign: # no (a) => (a = 1)
+  - error
+  - props: true
+    ignorePropertyModificationsFor:
+      - acc
+      - accumulator
+      - e
+      - ctx
+      - req
+      - request
+      - res
+      - response
+      - $scope
+no-proto: error # no __proto__
+no-redeclare: error
+no-restricted-properties:
+  - error
+  - object: arguments
+    property: callee
+    message: arguments.callee is deprecated
+  - object: global
+    property: isFinite
+    message: &isFinite Use Number.isFinite instead
+  - object: self
+    property: isFinite
+    message: *isFinite
+  - object: window
+    property: isFinite
+    message: *isFinite
+  - object: global
+    property: isNaN
+    message: &NaN Use Number.isNaN instead
+  - object: self
+    property: isNaN
+    message: *NaN
+  - object: window
+    property: isNaN
+    message: *NaN
+  - property: __defineGetter__
+    message: &defProp Use Object.defineProperty instead
+  - property: __defineSetter__
+    message: *defProp
+  - object: Math
+    property: pow
+    message: Use ** instead
+no-return-assign:
+  - warn
+  - always
+no-return-await: error
+no-script-url: warn
+no-self-compare: error
+no-sequences: warn
+no-throw-literal: error
+no-unmodified-loop-condition: error
+no-unused-expressions: error
+no-unused-labels: warn
+no-useless-call: warn
+no-useless-catch: warn
+no-useless-concat: warn
+no-useless-return: warn
+no-with: warn
+prefer-promise-reject-errors: error
+radix: error # letting parseInt guess the radix is dangerous
+require-await: warn
+# require-unicode-regexp: warn
+vars-on-top: warn
+wrap-iife:
+  - error
+  - outside
+yoda: warn
