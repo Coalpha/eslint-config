@@ -1,6 +1,6 @@
 {
   "name": "@coalpha/eslint-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A custom eslint config for my code",
   "main": "index.js",
   "repository": {
