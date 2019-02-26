@@ -9,28 +9,29 @@ const base = resolveYAML("base.yml");
 function minify(str) {
   switch (`${str}`) {
     case "false":
-      return 0
+      return 0;
     case "true":
     case "warn":
-      return 1
+      return 1;
     case "error":
-      return 2
+      return 2;
     default:
       return str;
   }
 }
-base.rules = Object.assign(
-  Object.create(null),
+const fromEntries = pairs => pairs.reduce((o, [k, v]) => (o[k] = v, o), {});
+base.rules = {
   ...["best-practices", "errors", "node", "style", "variables"]
-  .map(fileName => {
-    const rules = resolveYAML(`./rules/${fileName}.yml`);
-    Object.keys(rules).forEach(key => {
-      const val = rules[key];
-      rules[key] = Array.isArray(val) ? [minify(val[0]), ...val.slice(1)] : minify(val);
-    });
-    return rules;
-  })
-);
+    .map(fileName => fromEntries(
+      Object.entries(resolveYAML(`./rules/${fileName}.yml`)).map(([_, rule]) => [_,
+        Array.isArray(rule)
+          ? [minify(rule[0]),
+            ...rule.slice(1).map(arg => typeof arg === "object" && !Array.isArray(arg)
+              ? fromEntries(
+                Object.entries(arg).map(([_, val]) => [_, minify(val)])
+              ) : arg)] : minify(rule)])
+    ))
+};
 fs.writeFileSync(
   path.join(__dirname, "index.js"),
   `module.exports=${JSON.stringify(base).replace(/"(\w+)":/g, "$1:")}`

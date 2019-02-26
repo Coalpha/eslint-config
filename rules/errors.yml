@@ -1,5 +1,6 @@
 no-async-promise-executor: error
 no-await-in-loop: warn
+no-console: off
 no-misleading-character-class: error
 no-prototype-builtins: warn
 no-template-curly-in-string: error
