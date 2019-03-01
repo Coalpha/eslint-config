@@ -2,24 +2,32 @@
   "name": "@coalpha/eslint-config",
   "version": "0.0.3",
   "description": "A custom eslint config for my code",
+
   "main": "index.js",
+  "bin": {
+    "eslpha": "./cli.js"
+  },
+
+  "homepage": "https://github.com/Coalpha/eslint-config#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Coalpha/eslint-config.git"
   },
-  "author": "Cole Gannon",
-  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/Coalpha/eslint-config/issues"
   },
-  "homepage": "https://github.com/Coalpha/eslint-config#readme",
+
+  "author": "Cole Gannon",
+  "license" : "SEE LICENSE IN LICENCE",
+
+  "scripts": {
+    "start": "node build.js"
+  },
+
   "devDependencies": {
     "js-yaml": "^3.12.1"
   },
   "peerDependencies": {
     "eslint": "^5.14.1"
-  },
-  "scripts": {
-    "build": "node build.js"
   }
 }

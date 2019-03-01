@@ -1,16 +1,11 @@
 const fs = require("fs");
-const path = require("path");
+const { join } = require("path");
 const { load } = require("js-yaml");
 
-const resolveYAML = location => load(fs.readFileSync(location, "utf8"), { noCompatMode: true });
-
+const resolveYAML = location => load(fs.readFileSync(location, "utf8"));
 const base = resolveYAML("base.yml");
-
 function minify(str) {
-  switch (`${str}`) {
-    case "false":
-      return 0;
-    case "true":
+  switch (String(str)) {
     case "warn":
       return 1;
     case "error":
@@ -19,21 +14,13 @@ function minify(str) {
       return str;
   }
 }
-const fromEntries = pairs => pairs.reduce((o, [k, v]) => (o[k] = v, o), {});
-base.rules = {
-  ...["best-practices", "errors", "node", "style", "variables"]
-    .map(fileName => fromEntries(
-      Object.entries(resolveYAML(`./rules/${fileName}.yml`)).map(([_, rule]) => [_,
-        Array.isArray(rule)
-          ? [minify(rule[0]),
-            ...rule.slice(1).map(arg => typeof arg === "object" && !Array.isArray(arg)
-              ? fromEntries(
-                Object.entries(arg).map(([_, val]) => [_, minify(val)])
-              ) : arg)] : minify(rule)])
-    ))
-};
+
+const rulesDir = join(__dirname, "rules");
+base.rules = Object.assign({}, ...["best-practices", "errors", "node", "style", "variables"]
+  .map(fileName => Object.entries(resolveYAML(join(rulesDir, `${fileName}.yml`)))
+    .map(([_, rule]) => [_, Array.isArray(rule) ? [minify(rule[0]), ...rule.slice(1)] : minify(rule)])
+    .reduce((o, [k, v]) => ({ ...o, [k]: v }), {})));
 fs.writeFileSync(
-  path.join(__dirname, "index.js"),
+  join(__dirname, "index.js"),
   `module.exports=${JSON.stringify(base).replace(/"(\w+)":/g, "$1:")}`
 );
-

@@ -1,7 +1,38 @@
+for-direction: warn
+getter-return: warn
 no-async-promise-executor: error
 no-await-in-loop: warn
+no-compare-neg-zero: warn
+no-cond-assign: off
 no-console: off
+no-constant-condition: warn
+no-control-regex: warn
+no-debugger: off
+no-dupe-args: warn
+no-dupe-keys: error
+no-duplicate-case: error
+no-empty: warn
+no-empty-character-class: warn
+no-ex-assign: warn
+no-extra-boolean-cast: warn
+no-extra-parens: off
+no-extra-semi: error
+no-func-assign: error
+no-inner-declarations: warn
+no-invalid-regexp: error
+no-irregular-whitespace: error
 no-misleading-character-class: error
+no-obj-calls: error
 no-prototype-builtins: warn
-no-template-curly-in-string: error
+no-regex-spaces: off
+no-sparse-arrays: error
+no-template-curly-in-string: warn
+no-unexpected-multiline: warn
+no-unreachable: error
+no-unsafe-finally: warn
+no-unsafe-negation: error
 require-atomic-updates: error
+use-isnan: error
+valid-typeof:
+  - error
+  - requireStringLiterals: true

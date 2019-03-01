@@ -1,3 +1,5 @@
-rules
-build.js
+.eslintrc.yml
 base.yml
+build.js
+desktop.ini
+rules

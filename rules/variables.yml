@@ -1,3 +1,4 @@
+init-declarations: off
 no-delete-var: warn
 no-label-var: warn
 no-restricted-globals:
@@ -65,5 +66,5 @@ no-restricted-globals:
   - top
 no-shadow: error
 no-shadow-restricted-names: error
-no-undef-init: warn
+no-undef-init: error
 no-use-before-define: error

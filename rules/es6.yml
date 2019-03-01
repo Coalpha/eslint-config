@@ -5,26 +5,58 @@ arrow-parens:
   - warn
   - as-needed
 arrow-spacing: error
+constructor-super: warn
 generator-star-spacing:
   - error
   - before: false
     after: true
+no-class-assign: error
+no-confusing-arrow: off
+no-const-assign: error
+no-dupe-class-members: error
 no-duplicate-imports: error
+no-new-symbol: error
+no-restricted-imports: off
+no-this-before-super: error
 no-useless-computed-key: error
 no-useless-constructor: warn
-no-useless-rename: error
+no-useless-rename:
+  - error
+  - ignoreImport: false
+    ignoreExport: false
+    ignoreDestructuring: false
+no-var: off
 object-shorthand: error
 prefer-arrow-callback:
   - warn
   - allowNamedFunctions: true
     allowUnboundThis: true
-prefer-const: warn
-prefer-destructuring: warn
+prefer-const:
+  - warn
+  - destructuring: any
+    ignoreReadBeforeAssign: false
+prefer-destructuring:
+  - warn
+  - VariableDeclarator:
+      array: false
+      object: true
+    AssignmentExpression:
+      array: true
+      object: true
+    enforceForRenamedProperties: false
 prefer-numeric-literals: warn
 prefer-rest-params: error
 prefer-spread: error
 prefer-template: warn
-rest-spread-spacing: error
+require-yield: error
+rest-spread-spacing:
+  - error
+  - never
 symbol-description: warn
-template-curly-spacing: error # I'm not sure why I like it like ${this} but it's better than ${ this }
-yield-star-spacing: error # yield* something()
+template-curly-spacing:
+  - error
+  - never
+yield-star-spacing:
+  - error
+  - before: false
+    after: true
