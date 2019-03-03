@@ -84,7 +84,9 @@ const interrupt = () => error(c.bold.bgRedBright("Interrupt"), 0);
       disabled: "Modify",
     });
     startOverPrompt.on("cancel", interrupt);
-    if (!await startOverPrompt.run()) {
+    if (await startOverPrompt.run()) {
+      packageJSON.encodeAsJSON();
+    } else {
       let theLang, theFile;
       if (eslintConfigFiles.length > 1) {
         const whichToModify = new e.Select({
@@ -94,7 +96,7 @@ const interrupt = () => error(c.bold.bgRedBright("Interrupt"), 0);
             if (lang === "JS") {
               return { name: file.fileName, disabled: true, hint: "(cannot modify JS configs)" };
             }
-            return { message: file.fileName, name: index };
+            return { message: file.fileName, name: `${index}` };
           }),
         });
         whichToModify.on("cancel", interrupt);
@@ -156,7 +158,7 @@ const interrupt = () => error(c.bold.bgRedBright("Interrupt"), 0);
     ],
   });
   env.on("cancel", interrupt);
-  const desiredEnv = (await env.run())
+  const desiredEnv = (await env.run());
   config.env = {};
   desiredEnv.forEach(envOpt => config.env[envOpt] = true);
   if (!hasChosenFormat) {

@@ -29,13 +29,13 @@ class File {
   }
 
   get obj() {
-    if (this.is === "obj") {
-      if (this.data !== null && typeof this.data === "object") {
-        return this.data;
-      }
-      return {};
+    if (this.is !== "obj" && this.data) {
+      throw TypeError("The file is currently not loaded as an Object");
     }
-    throw TypeError("The file is currently not loaded as an Object");
+    if (this.data !== null && typeof this.data === "object") {
+      return this.data;
+    }
+    return {};
   }
 
   get path() { return this.__path; }
@@ -103,7 +103,7 @@ class File {
 
   write() {
     if (this.is === "obj") {
-      throw Error("Cannot write object to file");
+      throw Error(`Cannot write object to file in ${this.fileName}`);
     }
     fs.writeFileSync(this.__path, this.data);
   }
