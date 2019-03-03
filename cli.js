@@ -51,6 +51,7 @@ if (packageJSON.obj.eslintConfig) {
         if (k === "delete") {
           return () => {
             delete o.data.eslintConfig;
+            o.encodeAsJSON();
             o.write();
           };
         }
@@ -90,7 +91,7 @@ const interrupt = () => error(c.bold.bgRedBright("Interrupt"), 0);
       let theLang, theFile;
       if (eslintConfigFiles.length > 1) {
         const whichToModify = new e.Select({
-          message: "What environments are you coding in? (Space to select)",
+          message: "Which config file do you want to modify?",
           symbols: { indicator: ">" },
           choices: eslintConfigFiles.map(([lang, file], index) => {
             if (lang === "JS") {
@@ -137,7 +138,7 @@ const interrupt = () => error(c.bold.bgRedBright("Interrupt"), 0);
     config.env = {};
   }
   const env = new e.MultiSelect({
-    message: `What environments are you coding in? (Space to select)\n${
+    message: `What environments are you coding for? (Space to select)\n${
       c.dim("https://eslint.org/docs/user-guide/configuring#specifying-environments")
     }`,
     symbols: { indicator: ">" },
