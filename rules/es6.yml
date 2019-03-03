@@ -4,6 +4,7 @@ arrow-body-style:
 arrow-parens:
   - warn
   - as-needed
+  - requireForBlockBody: true
 arrow-spacing: error
 constructor-super: warn
 generator-star-spacing:
@@ -25,7 +26,7 @@ no-useless-rename:
   - ignoreImport: false
     ignoreExport: false
     ignoreDestructuring: false
-no-var: off
+no-var: warn
 object-shorthand: error
 prefer-arrow-callback:
   - warn
@@ -43,7 +44,7 @@ prefer-destructuring:
     AssignmentExpression:
       array: true
       object: true
-    enforceForRenamedProperties: false
+  - enforceForRenamedProperties: false
 prefer-numeric-literals: warn
 prefer-rest-params: error
 prefer-spread: error

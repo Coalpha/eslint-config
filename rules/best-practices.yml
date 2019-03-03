@@ -1,7 +1,4 @@
-accessor-pairs:
-  - warn
-  - setWithoutGet: true
-    getWithoutSet: false
+accessor-pairs: off
 array-callback-return:
   - warn
   - allowImplicit: true
@@ -28,7 +25,7 @@ dot-notation:
   - allowKeywords: true
 eqeqeq:
   - error
-  - smart
+  - always
 guard-for-in: warn
 no-alert: warn
 no-caller: error
@@ -122,9 +119,7 @@ no-restricted-properties:
   - object: Math
     property: pow
     message: Use ** instead
-no-return-assign:
-  - warn
-  - except-parens
+no-return-assign: off
 no-return-await: error
 no-script-url: warn
 no-self-assign:
@@ -154,10 +149,8 @@ radix:
   - always # letting parseInt guess the radix is dangerous
 require-await: error
 # require-unicode-regexp: warn
-vars-on-top: warn
-wrap-iife:
-  - error
-  - outside
+vars-on-top: off
+wrap-iife: off
 yoda:
   - warn
   - never

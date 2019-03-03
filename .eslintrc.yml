@@ -1,4 +1,3 @@
 extends: ./index.js
 env:
   node: true
-  browser: true
