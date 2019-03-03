@@ -131,7 +131,7 @@ no-multi-assign: off
 no-multiple-empty-lines:
   - warn
   - max: 2
-no-negated-condition: error
+no-negated-condition: warn
 no-nested-ternary: warn # not sure about this one
 no-new-object: error
 no-plusplus: off
