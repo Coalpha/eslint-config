@@ -33,6 +33,14 @@ const eslintConfigFiles = [
   }
 }
 packageJSON.asJSON();
+let needsNPMInstall = true;
+if (
+  packageJSON.obj.devDependencies
+  && packageJSON.obj.devDependencies["@coalpha/eslint-config"]
+  && packageJSON.obj.devDependencies.eslint
+) {
+  needsNPMInstall = false;
+}
 if (packageJSON.obj.eslintConfig) {
   eslintConfigFiles.push([
     "JSON", new Proxy(packageJSON, {
@@ -100,7 +108,7 @@ const interrupt = () => error(c.bold.bgRedBright("Interrupt"), 0);
             theFile.asJSON();
             configLang = "JSON";
           } catch (e) {
-            console.log(e);
+            console.error(e);
             configLang = "JSON";
             theFile.asYAML();
           }
@@ -115,15 +123,15 @@ const interrupt = () => error(c.bold.bgRedBright("Interrupt"), 0);
       } catch (e) {
         let x = 20;
         while (x-- > 0) {
-          console.error(e);
           console.error(c.yellowBright(`Couldn't read ${theFile.path}`));
+          console.error(e);
         }
       }
     }
   }
-  const config = base.obj || {};
+  const config = base.obj;
   config.extends = "@coalpha";
-  if (typeof config.env !== "object") {
+  if (!config.env || typeof config.env !== "object") {
     config.env = {};
   }
   const env = new e.MultiSelect({
@@ -148,8 +156,9 @@ const interrupt = () => error(c.bold.bgRedBright("Interrupt"), 0);
     ],
   });
   env.on("cancel", interrupt);
+  const desiredEnv = (await env.run())
   config.env = {};
-  (await env.run()).forEach(envOpt => config.env[envOpt] = true);
+  desiredEnv.forEach(envOpt => config.env[envOpt] = true);
   if (!hasChosenFormat) {
     const format = new e.Select({
       message: "What format should .eslintrc be in?",
@@ -176,16 +185,18 @@ const interrupt = () => error(c.bold.bgRedBright("Interrupt"), 0);
   base[`encodeAs${configLang}`](true);
   eslintConfigFiles.forEach(([lang, file]) => file.delete());
   base.write();
-  const packages = ["eslint", "@coalpha/eslint-config"];
-  const args = ["install", "--save-dev", ...packages];
-  const opts = { cwd: process.cwd(), stdio: "inherit" };
-  const npm = process.platform === "win32" ? "npm.cmd" : "npm";
-  const install = spawn(npm, args, opts);
-  process.removeAllListeners("SIGINT");
-  process.on("SIGINT", () => {
-    install.kill();
-    interrupt();
-  });
-  install.on("error", err => error(c.red`Failed to spawn subprocess. Do you have npm installed?`, 11));
-  install.on("close", (code) => { if (code !== null) console.log(`Installing Finished with code ${code}`); });
+  if (needsNPMInstall) {
+    const packages = ["eslint", "@coalpha/eslint-config"];
+    const args = ["install", "--save-dev", ...packages];
+    const opts = { cwd: process.cwd(), stdio: "inherit" };
+    const npm = process.platform === "win32" ? "npm.cmd" : "npm";
+    const install = spawn(npm, args, opts);
+    process.removeAllListeners("SIGINT");
+    process.on("SIGINT", () => {
+      install.kill();
+      interrupt();
+    });
+    install.on("error", err => error(c.red`Failed to spawn subprocess. Do you have npm installed?`, 11));
+    install.on("close", (code) => { if (code !== null) console.log(`Installing Finished with code ${code}`); });
+  }
 })();

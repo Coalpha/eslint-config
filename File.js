@@ -30,7 +30,10 @@ class File {
 
   get obj() {
     if (this.is === "obj") {
-      return this.data;
+      if (this.data !== null && typeof this.data === "object") {
+        return this.data;
+      }
+      return {};
     }
     throw TypeError("The file is currently not loaded as an Object");
   }
@@ -89,7 +92,6 @@ class File {
     if (this.is === "text") {
       throw Error("Cannot serialize text into text");
     }
-    console.log(this.data);
     this.data = YAML.dump(this.data);
     this.is = "text";
   }
