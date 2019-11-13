@@ -1,0 +1,1 @@
+module.exports={env:{es6:true},parserOptions:{ecmaVersion:2019,sourceType:"module",ecmaFeatures:{objectLiteralDuplicateProperties:false}},rules:{}}

@@ -1,0 +1,96 @@
+accessor-pairs: off # these are cursed anyways
+array-callback-return: off # shut
+block-scoped-var: off # shut
+class-methods-use-this: off # shut
+complexity: off
+consistent-return: off # shut
+curly:
+   - warn
+   - all
+default-case: off
+dot-location:
+   - warn
+   - property
+dot-notation:
+   - warn
+   - { allowKeywords: true }
+eqeqeq:
+   - warn
+   - always
+guard-for-in: warn # just don't use for in
+max-classes-per-file: off
+no-alert: off
+no-caller: off
+no-case-declarations: error
+no-div-regex: off
+no-else-return:
+   - warn
+   - { allowElseIf: off }
+no-empty-function: off # shut
+no-empty-pattern: off # shut
+no-eq-null: warn
+no-eval: off
+no-extend-native: warn # that's kind of icky
+no-extra-bind: warn
+no-extra-label: off
+no-fallthrough: off
+no-floating-decimal: warn
+no-global-assign: off
+no-implicit-coercion: off
+no-implicit-globals: off
+no-implied-eval: off
+no-invalid-this: warn
+no-iterator: error # no __iterator__
+no-labels: off
+no-lone-blocks: off
+no-loop-func: error # no function declarations within loops
+no-magic-numbers: off
+no-multi-spaces:
+   - warn
+   - { ignoreEOLComments: off, exceptions: {} }
+no-multi-str: off
+no-new: error # no new side effects
+no-new-func: off # eval basically
+no-new-wrappers: error # no new String()
+no-octal: warn
+no-octal-escape: off
+no-param-reassign: off
+no-proto: warn # no __proto__
+no-redeclare: off # nah it's fine
+no-restricted-properties: off
+no-return-assign: off
+no-return-await: warn
+no-script-url: warn
+no-self-assign:
+   - warn
+   - { props: true }
+no-self-compare: warn
+no-sequences: off # I like them
+no-throw-literal: off # useful for prototyping
+no-unmodified-loop-condition: off # shut
+no-unused-expressions: off # shut
+no-unused-labels: off # shut
+no-useless-call: warn # Because thisarg might be changed
+no-useless-catch: off # you shouldn't even need a rule for this 
+no-useless-concat: warn
+no-useless-escape: warn
+no-useless-return: warn
+no-void: off
+no-warning-comments: off
+no-with: off
+prefer-named-capture-group: off
+prefer-promise-reject-errors:
+   - warn
+   - { allowEmptyReject: off }
+prefer-regex-literals: warn
+radix:
+   - error
+   - always # letting parseInt guess the radix is dangerous
+require-await: off # shut
+# require-unicode-regexp: warn
+vars-on-top: off
+wrap-iife: off
+yoda:
+   - warn
+   - never
+   - { exceptRange: true }

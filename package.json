@@ -1,33 +1,29 @@
 {
-  "name": "@coalpha/eslint-config",
-  "version": "0.1.1",
-  "description": "A custom eslint config for my code",
-  "main": "index.js",
-  "bin": {
-    "eslpha": "./cli.js"
-  },
-  "homepage": "https://github.com/Coalpha/eslint-config#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Coalpha/eslint-config.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Coalpha/eslint-config/issues"
-  },
-  "author": "Cole Gannon",
-  "license": "SEE LICENSE IN LICENCE",
-  "scripts": {
-    "start": "node build.js"
-  },
-  "dependencies": {
-    "enquirer": "^2.3.0",
-    "js-yaml": "^3.12.1"
-  },
-  "peerDependencies": {
-    "eslint": "^5.14.1"
-  },
-  "devDependencies": {
-    "ansi-colors": "^3.2.3",
-    "eslint": "^5.14.1"
-  }
+   "name": "@coalpha/eslint-config",
+   "version": "0.1.1",
+   "description": "A custom eslint config for my code",
+   "main": "rules.js",
+   "homepage": "https://github.com/Coalpha/eslint-config#readme",
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Coalpha/eslint-config.git"
+   },
+   "bugs": {
+      "url": "https://github.com/Coalpha/eslint-config/issues"
+   },
+   "author": "Cole Gannon",
+   "license": "SEE LICENSE IN LICENCE",
+   "scripts": {
+      "start": "node build.js"
+   },
+   "dependencies": {
+      "@types/node": "^12.12.7",
+      "js-yaml": "^3.13.1"
+   },
+   "peerDependencies": {
+      "eslint": "^6.6.0"
+   },
+   "devDependencies": {
+      "eslint": "^6.6.0"
+   }
 }

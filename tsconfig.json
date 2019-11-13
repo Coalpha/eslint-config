@@ -1,0 +1,23 @@
+{
+   "include": [
+      "**/*.ts",
+      "**/*.js"
+   ],
+   "exclude": ["node_modules"],
+   "compilerOptions": {
+      "allowJs": true,
+      "allowSyntheticDefaultImports": true,
+      "checkJs": true,
+      "downlevelIteration": true,
+      "experimentalDecorators": true,
+      "forceConsistentCasingInFileNames": true,
+      "incremental": true,
+      "newLine": "lf",
+      "outDir": "./lib",
+      "removeComments": true,
+      "target": "ESNext",
+      "lib": [
+         "esnext",
+      ]
+   }
+}

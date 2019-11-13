@@ -1,71 +1,9 @@
 init-declarations: off
-no-delete-var: warn
-no-label-var: warn
-no-restricted-globals:
-  - warn
-  - addEventListener
-  - blur
-  - close
-  - closed
-  - confirm
-  - defaultStatus
-  - defaultstatus
-  - error
-  - event
-  - external
-  - find
-  - focus
-  - frameElement
-  - frames
-  - history
-  - innerHeight
-  - innerWidth
-  - isFinite
-  - isNaN
-  - length
-  - location
-  - locationbar
-  - menubar
-  - moveBy
-  - moveTo
-  - name
-  - onblur
-  - onerror
-  - onfocus
-  - onload
-  - onresize
-  - onunload
-  - open
-  - opener
-  - opera
-  - outerHeight
-  - outerWidth
-  - pageXOffset
-  - pageYOffset
-  - parent
-  - print
-  - removeEventListener
-  - resizeBy
-  - resizeTo
-  - screen
-  - screenLeft
-  - screenTop
-  - screenX
-  - screenY
-  - scroll
-  - scrollbars
-  - scrollBy
-  - scrollTo
-  - scrollX
-  - scrollY
-  - self
-  - status
-  - statusbar
-  - stop
-  - toolbar
-  - top
-no-shadow: error
+no-delete-var: error
+no-label-var: off # no this is good xD
+no-restricted-globals: off
+no-shadow: off # shadowing, when done right, can tell you that something isn't being used
 no-shadow-restricted-names: error
-no-undef: error
-no-undef-init: error
+no-undef: warn # shut
+no-undef-init: error # that's dumb just do var something;
 no-use-before-define: error
