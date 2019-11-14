@@ -1,85 +1,85 @@
 array-bracket-newline:
-   - warn
-   - multiline: true
-      minItems: null
+  - warn
+  - multiline: true
+    minItems: null
 array-bracket-spacing:
-   - warn
-   - never
-   - singleValue: false
-      objectsInArrays: false
-      arraysInArrays: false
+  - warn
+  - never
+  - singleValue: false
+    objectsInArrays: false
+    arraysInArrays: false
 array-element-newline: off
 block-spacing:
-   - warn
-   - always
+  - warn
+  - always
 brace-style:
-   - warn
-   - 1tbs
-   - allowSingleLine: true
+  - warn
+  - 1tbs
+  - allowSingleLine: true
 camelcase: off # no_u
 capitalized-comments:
-   - warn
-   - never
+  - warn
+  - never
 comma-dangle:
-   - warn
-   - only-multiline
+  - warn
+  - only-multiline
 comma-spacing:
-   - warn
-   - before: false
-      after: true
+  - warn
+  - before: false
+    after: true
 comma-style:
-   - warn
-   - last
+  - warn
+  - last
 computed-property-spacing:
-   - warn
-   - never
+  - warn
+  - never
 consistent-this: off
 eol-last:
-   - warn
-   - always
+  - warn
+  - always
 func-call-spacing:
-   - warn
-   - never
+  - warn
+  - never
 func-name-matching: off
 func-names: off
 func-style:
-   - warn
-   - declaration
-   - allowArrowFunctions: true
+  - warn
+  - declaration
+  - allowArrowFunctions: true
 function-paren-newline:
-   - warn
-   - consistent
+  - warn
+  - consistent
 id-blacklist: off
 id-length: off
 id-match: off
 implicit-arrow-linebreak: off
 indent:
-   - warn
-   - 3
-   - SwitchCase: 1
+  - warn
+  - 3
+  - SwitchCase: 1
 jsx-quotes: off
 key-spacing:
-   - warn
-   - beforeColon: false
-      afterColon: true
-      mode: strict
+  - warn
+  - beforeColon: false
+    afterColon: true
+    mode: strict
 keyword-spacing:
-   - warn
-   - before: true
-      after: true
+  - warn
+  - before: true
+    after: true
 # line-comment-position: warn
 linebreak-style:
-   - error
-   - unix
+  - error
+  - unix
 lines-around-comment: off
 lines-between-class-members:
-   - warn
-   - always
+  - warn
+  - always
 max-depth: off
 max-len:
-   - warn
-   - 120
-   - 2
+  - warn
+  - 120
+  - 2
 max-lines: off
 max-lines-per-function: off
 max-nested-callbacks: off
@@ -88,8 +88,8 @@ max-statements: off
 max-statements-per-line: off
 multiline-comment-style: off
 multiline-ternary:
-   - warn
-   - always-multiline
+  - warn
+  - always-multiline
 new-cap: off
 new-parens: off # new Something; is good and cool
 newline-per-chained-call: off
@@ -113,81 +113,81 @@ no-trailing-spaces: warn
 no-unneeded-ternary: warn
 no-whitespace-before-property: warn
 nonblock-statement-body-position:
-   - warn
-   - beside
+  - warn
+  - beside
 object-curly-newline:
-   - warn
-   - consistent: true
+  - warn
+  - consistent: true
 object-curly-spacing:
-   - warn
-   - always
+  - warn
+  - always
 object-property-newline: off
 one-var: off # do what's best
 one-var-declaration-per-line:
-   - warn
-   - initializations
+  - warn
+  - initializations
 operator-assignment:
-   - warn
-   - always
+  - warn
+  - always
 operator-linebreak:
-   - warn
-   - before
+  - warn
+  - before
 padded-blocks:
-   - warn
-   - never
+  - warn
+  - never
 prefer-object-spread: warn
 quote-props:
-   - warn
-   - as-needed
-   - keywords: false
-      unnecessary: false
-      numbers: false
+  - warn
+  - as-needed
+  - keywords: false
+    unnecessary: false
+    numbers: false
 quotes:
-   - warn
-   - double
-   - avoidEscape: true
-      allowTemplateLiterals: false
+  - warn
+  - double
+  - avoidEscape: true
+    allowTemplateLiterals: false
 semi:
-   - error
-   - always
+  - error
+  - always
 semi-spacing:
-   - warn
-   - before: false
-      after: true
+  - warn
+  - before: false
+    after: true
 semi-style:
-   - warn
-   - last
+  - warn
+  - last
 sort-keys: off
 sort-vars: off
 space-before-blocks:
-   - warn
-   - always
+  - warn
+  - always
 space-before-function-paren:
-   - warn
-   - anonymous: always
-      named: never
-      asyncArrow: always
+  - warn
+  - anonymous: always
+    named: never
+    asyncArrow: always
 space-in-parens:
-   - warn
-   - never
+  - warn
+  - never
 space-infix-ops:
-   - warn
-   - int32Hint: true
+  - warn
+  - int32Hint: true
 space-unary-ops:
-   - warn
-   - words: true
-      nonwords: false
+  - warn
+  - words: true
+    nonwords: false
 spaced-comment:
-   - warn
-   - always
+  - warn
+  - always
 switch-colon-spacing:
-   - warn
-   - before: false
-      after: true
+  - warn
+  - before: false
+    after: true
 template-tag-spacing:
-   - warn
-   - never
+  - warn
+  - never
 unicode-bom:
-   - warn
-   - never
+  - warn
+  - never
 wrap-regex: off

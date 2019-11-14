@@ -5,18 +5,18 @@ class-methods-use-this: off # shut
 complexity: off
 consistent-return: off # shut
 curly:
-   - warn
-   - all
+  - warn
+  - all
 default-case: off
 dot-location:
-   - warn
-   - property
+  - warn
+  - property
 dot-notation:
-   - warn
-   - { allowKeywords: true }
+  - warn
+  - { allowKeywords: true }
 eqeqeq:
-   - warn
-   - always
+  - warn
+  - always
 guard-for-in: warn # just don't use for in
 max-classes-per-file: off
 no-alert: off
@@ -24,8 +24,8 @@ no-caller: off
 no-case-declarations: error
 no-div-regex: off
 no-else-return:
-   - warn
-   - { allowElseIf: off }
+  - warn
+  - { allowElseIf: false }
 no-empty-function: off # shut
 no-empty-pattern: off # shut
 no-eq-null: warn
@@ -46,8 +46,8 @@ no-lone-blocks: off
 no-loop-func: error # no function declarations within loops
 no-magic-numbers: off
 no-multi-spaces:
-   - warn
-   - { ignoreEOLComments: off, exceptions: {} }
+  - warn
+  - { ignoreEOLComments: false, exceptions: {} }
 no-multi-str: off
 no-new: error # no new side effects
 no-new-func: off # eval basically
@@ -62,8 +62,8 @@ no-return-assign: off
 no-return-await: warn
 no-script-url: warn
 no-self-assign:
-   - warn
-   - { props: true }
+  - warn
+  - { props: true }
 no-self-compare: warn
 no-sequences: off # I like them
 no-throw-literal: off # useful for prototyping
@@ -80,17 +80,17 @@ no-warning-comments: off
 no-with: off
 prefer-named-capture-group: off
 prefer-promise-reject-errors:
-   - warn
-   - { allowEmptyReject: off }
+  - warn
+  - { allowEmptyReject: false }
 prefer-regex-literals: warn
 radix:
-   - error
-   - always # letting parseInt guess the radix is dangerous
+  - error
+  - always # letting parseInt guess the radix is dangerous
 require-await: off # shut
 # require-unicode-regexp: warn
 vars-on-top: off
 wrap-iife: off
 yoda:
-   - warn
-   - never
-   - { exceptRange: true }
+  - warn
+  - never
+  - { exceptRange: true }

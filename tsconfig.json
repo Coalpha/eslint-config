@@ -16,8 +16,6 @@
       "outDir": "./lib",
       "removeComments": true,
       "target": "ESNext",
-      "lib": [
-         "esnext",
-      ]
+      "lib": ["esnext"]
    }
 }

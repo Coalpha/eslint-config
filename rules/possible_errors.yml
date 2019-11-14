@@ -24,7 +24,7 @@ no-invalid-regexp: error
 no-irregular-whitespace: error
 no-misleading-character-class: error
 no-obj-calls: error
-no-prototype-builtins: warn
+no-prototype-builtins: off # .hasOwnProperty
 no-regex-spaces: off
 no-sparse-arrays: error
 no-template-curly-in-string: warn # that's probably a mistake
@@ -35,5 +35,5 @@ no-unsafe-negation: error
 require-atomic-updates: error
 use-isnan: error
 valid-typeof:
-   - error
-   - requireStringLiterals: true
+  - error
+  - requireStringLiterals: true

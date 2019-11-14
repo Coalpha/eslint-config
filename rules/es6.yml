@@ -1,15 +1,15 @@
 arrow-body-style:
-   - warn
-   - as-needed
+  - warn
+  - as-needed
 arrow-parens:
-   - warn
-   - as-needed
-   - { requireForBlockBody: false }
+  - warn
+  - as-needed
+  - { requireForBlockBody: false }
 arrow-spacing: warn
 constructor-super: off # shut
 generator-star-spacing: # function *pointer? is wrong it's a function*
-   - warn
-   - { before: false, after: true }
+  - warn
+  - { before: false, after: true }
 no-class-assign: error
 no-confusing-arrow: off
 no-const-assign: error
@@ -21,35 +21,35 @@ no-this-before-super: error
 no-useless-computed-key: warn
 no-useless-constructor: warn
 no-useless-rename:
-   - warn
-   - { ignoreImport: false, ignoreExport: false, ignoreDestructuring: false }
+  - warn
+  - { ignoreImport: false, ignoreExport: false, ignoreDestructuring: false }
 no-var: off
 object-shorthand: warn
 prefer-arrow-callback:
-   - warn
-   - { allowNamedFunctions: true, allowUnboundThis: true }
+  - warn
+  - { allowNamedFunctions: true, allowUnboundThis: true }
 prefer-const: # maybe shut
-   - warn
-   - { destructuring: any, ignoreReadBeforeAssign: false }
+  - warn
+  - { destructuring: any, ignoreReadBeforeAssign: false }
 prefer-destructuring:
-   - warn
-   - {
-      VariableDeclarator: { array: false, object: true },
-      AssignmentExpression: { array: true, object: true },
-   }
-   - { enforceForRenamedProperties: false }
+  - warn
+  - {
+    VariableDeclarator: { array: false, object: true },
+    AssignmentExpression: { array: true, object: true },
+  }
+  - { enforceForRenamedProperties: false }
 prefer-numeric-literals: warn
 prefer-rest-params: warn
 prefer-spread: warn
 prefer-template: warn
 require-yield: off # shut
 rest-spread-spacing:
-   - warn
-   - never
+  - warn
+  - never
 symbol-description: off
 template-curly-spacing:
-   - warn
-   - never
+  - warn
+  - never
 yield-star-spacing:
-   - warn
-   - { before: false, after: true }
+  - warn
+  - { before: false, after: true }
