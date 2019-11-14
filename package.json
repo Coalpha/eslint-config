@@ -2,32 +2,36 @@
    "name": "@coalpha/eslint-config",
    "version": "1.0.0",
    "description": "A custom eslint config for my code",
-   "main": "config.js",
+   "keywords": [
+      "config",
+      "eslint",
+      "eslint-config",
+      "eslintconfig"
+   ],
+   "homepage": "https://github.com/Coalpha/eslint-config",
+   "bugs": {
+      "url": "https://github.com/Coalpha/eslint-config/issues"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Coalpha/eslint-config.git"
+   },
+   "license": "AGPL-3.0-only",
    "author": "Cole Gannon",
    "files": [
       "config.js",
       "tsconfig.json"
    ],
-   "homepage": "https://github.com/Coalpha/eslint-config",
-   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/Coalpha/eslint-config.git"
-   },
-   "bugs": {
-      "url": "https://github.com/Coalpha/eslint-config/issues"
-   },
-   "license": "SEE LICENSE IN LICENCE",
+   "main": "config.js",
    "scripts": {
       "start": "node build.js"
    },
-   "dependencies": {
+   "devDependencies": {
       "@types/node": "^12.12.7",
+      "eslint": "^6.6.0",
       "yaml": "^1.7.2"
    },
    "peerDependencies": {
-      "eslint": "^6.6.0"
-   },
-   "devDependencies": {
       "eslint": "^6.6.0"
    }
 }

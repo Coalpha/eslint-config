@@ -5,6 +5,8 @@
 
 ## Instructions
 
+`npm install --save-dev @coalpha/eslint-config`
+
 In your [eslint config file](https://eslint.org/docs/user-guide/configuring#configuration-file-formats),
 change the `extends` field to `@coalpha`.
 
