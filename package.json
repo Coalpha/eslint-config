@@ -1,6 +1,6 @@
 {
    "name": "@coalpha/eslint-config",
-   "version": "1.0.0",
+   "version": "1.0.1",
    "description": "A custom eslint config for my code",
    "keywords": [
       "config",
@@ -19,12 +19,11 @@
    "license": "AGPL-3.0-only",
    "author": "Cole Gannon",
    "files": [
-      "config.js",
-      "tsconfig.json"
+      "config.js"
    ],
    "main": "config.js",
    "scripts": {
-      "start": "node build.js"
+      "build": "node build.js"
    },
    "devDependencies": {
       "@types/node": "^12.12.7",
