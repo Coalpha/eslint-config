@@ -17,12 +17,10 @@ brace-style:
   - 1tbs
   - allowSingleLine: true
 camelcase: off # no_u
-capitalized-comments:
-  - warn
-  - never
+capitalized-comments: off
 comma-dangle:
   - warn
-  - only-multiline
+  - always-multiline # = `${Math.random() > .5 ? "only" : "always"}-multiline`;
 comma-spacing:
   - warn
   - before: false
@@ -72,9 +70,7 @@ linebreak-style:
   - error
   - unix
 lines-around-comment: off
-lines-between-class-members:
-  - warn
-  - always
+lines-between-class-members: off
 max-depth: off
 max-len:
   - warn
@@ -135,6 +131,8 @@ operator-linebreak:
 padded-blocks:
   - warn
   - never
+padding-line-between-statements: off # shut
+prefer-exponentiation-operator: warn
 prefer-object-spread: warn
 quote-props:
   - warn
@@ -177,9 +175,10 @@ space-unary-ops:
   - warn
   - words: true
     nonwords: false
-spaced-comment:
-  - warn
-  - always
+# spaced-comment:
+#   - warn
+#   - always
+spaced-comment: off # figure out how to do this: //> the_return_value
 switch-colon-spacing:
   - warn
   - before: false

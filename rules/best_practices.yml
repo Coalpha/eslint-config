@@ -17,11 +17,13 @@ dot-notation:
 eqeqeq:
   - warn
   - always
+grouped-accessor-pairs: off
 guard-for-in: warn # just don't use for in
 max-classes-per-file: off
 no-alert: off
 no-caller: off
 no-case-declarations: error
+no-constructor-return: error
 no-div-regex: off
 no-else-return:
   - warn

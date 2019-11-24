@@ -1,6 +1,6 @@
 {
    "name": "@coalpha/eslint-config",
-   "version": "1.0.1",
+   "version": "1.0.2",
    "description": "A custom eslint config for my code",
    "keywords": [
       "config",
@@ -23,14 +23,15 @@
    ],
    "main": "config.js",
    "scripts": {
-      "build": "node build.js"
+      "build": "node build.js",
+      "prepare": "npm run build"
    },
    "devDependencies": {
       "@types/node": "^12.12.7",
-      "eslint": "^6.6.0",
+      "eslint": "^6.7.0",
       "yaml": "^1.7.2"
    },
    "peerDependencies": {
-      "eslint": "^6.6.0"
+      "eslint": "^6.7.0"
    }
 }

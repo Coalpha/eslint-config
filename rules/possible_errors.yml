@@ -9,6 +9,7 @@ no-constant-condition: warn
 no-control-regex: error
 no-debugger: off
 no-dupe-args: off # (_, _, a) => a
+no-dupe-else-if: warn # if (a) { } else if (a) { }
 no-dupe-keys: error
 no-duplicate-case: error
 no-empty: off
@@ -26,6 +27,7 @@ no-misleading-character-class: error
 no-obj-calls: error
 no-prototype-builtins: off # .hasOwnProperty
 no-regex-spaces: off
+no-setter-return: error
 no-sparse-arrays: error
 no-template-curly-in-string: warn # that's probably a mistake
 no-unexpected-multiline: off
