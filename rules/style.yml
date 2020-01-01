@@ -148,6 +148,7 @@ quotes:
 semi:
   - error
   - always
+  - omitLastInOneLineBlock: true
 semi-spacing:
   - warn
   - before: false
