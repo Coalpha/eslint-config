@@ -1,6 +1,10 @@
 {
-   "extends": "./config.js",
+   "extends": "./config.min.js",
    "env": {
       "node": true
-   }
+   },
+   "ignorePatterns": [
+      "node_modules/",
+      "*.min.js"
+   ]
 }

@@ -42,5 +42,5 @@ for (const filename of rules_dir) {
 // it probably doesn't matter but might as well
 fs.writeFileSync(
    outfile,
-   `module.exports=JSON.parse('${JSON.stringify(base)}');`
+   `module.exports=JSON.parse('${JSON.stringify(base)}');`,
 );
