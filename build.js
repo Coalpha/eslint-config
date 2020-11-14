@@ -40,7 +40,8 @@ for (const filename of rules_dir) {
 
 // JSON.parse is faster than a bare object in V8
 // it probably doesn't matter but might as well
+const outJSON = JSON.stringify(base);
 fs.writeFileSync(
    outfile,
-   `module.exports=JSON.parse('${JSON.stringify(base)}');`,
+   `module.exports=JSON.parse('${outJSON}');`,
 );

@@ -14,3 +14,5 @@ change the `extends` field to `@coalpha`.
 
 Also, it's kinda cool how I can lint the eslint config with the eslint config.
 It's all thanks to eslint's flexible config file format.
+
+https://github.com/eslint/eslint/blob/a47770706ac59633dcd73e886d1a7282b324ee06/lib/shared/naming.js#L15-L51
